@@ -11,6 +11,10 @@ you want to share.
   - Run your app as a container that virtualizes only the application layer.
   - The container runs on the host OS, and the environment is managed by a container engine (like Docker).
 
+### RUNNING DOCKER
+
+Run "/opt/docker-desktop/Docker Desktop"
+
 ### DOCKERFILE
 
 This file tells Docker how to create an image. Syntax is INSTRUCTION arguments
