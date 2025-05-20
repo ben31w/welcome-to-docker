@@ -12,10 +12,13 @@ COPY ./src ./src
 COPY ./public ./public
 
 # Install node packages, install serve, build the app, and remove dependencies at the end
-RUN npm install \
-    && npm install -g serve \
-    && npm run build \
-    && rm -fr node_modules
+# To solve certificate errors (npm install taking forever), add config line.
+# https://forums.docker.com/t/npm-install-in-docker-tutorial-is-taking-forever/139328/10
+RUN npm config set strict-ssl
+RUN npm install --verbose 
+RUN npm install --verbose -g serve 
+RUN npm run build 
+RUN rm -fr node_modules
 
 EXPOSE 3000
 
