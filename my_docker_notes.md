@@ -39,3 +39,5 @@ Now, the image magically appears in Docker Desktop.
 ### CONTAINER
 
 A container is a running instance of an image.
+
+One way to start a container is to run an image in Docker Desktop.
