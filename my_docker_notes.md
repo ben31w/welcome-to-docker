@@ -35,9 +35,6 @@ Build the image using:
 `docker build -t TAG_NAME .`
 
 Now, the image magically appears in Docker Desktop.
-If you build an image that is identical to another image, it looks like Docker is
-smart enough to not duplicate the image. But if you modify the files and build, a
-new image appears.
 
 ### CONTAINER
 
