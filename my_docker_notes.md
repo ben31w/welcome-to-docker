@@ -31,10 +31,12 @@ This file tells Docker how to create an image. Syntax is INSTRUCTION arguments
 
 An image is a snapshot of the application and environment you want to package.
 
-Build the image using:
-`docker build -t TAG_NAME .`
+Build the image using (note the dot at the end):
+`docker build -t IMAGE_NAME(:TAG_NAME) .`
 
 Now, the image magically appears in Docker Desktop.
+
+If you omit a TAG_NAME, one will be generated.
 
 ### CONTAINER
 
@@ -43,7 +45,7 @@ A container is a running instance of an image.
 One way to start a container is to run an image in Docker Desktop.
 
 Another way to start a container is this command:
-`docker run -d -p HOST_PORT:CONTAINER_PORT TAG_NAME`
+`docker run -d -p HOST_PORT:CONTAINER_PORT IMAGE_NAME:TAG_NAME`
 
 <i>Note on ports:</i>
 Your computer's ports are different from the container's ports.
